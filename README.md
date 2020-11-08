@@ -27,7 +27,6 @@
 | user            | references | null: false, foreign_key:true |
 | name            | string     | null: false                   |
 | text            | text       | null: false                   |
-| images_id       | integer    | null: false                   |
 | category_id     | integer    | null: false                   |
 | condition_id    | references | null: false                   |
 | postage_pay_id  | string     | null: false                   | 
