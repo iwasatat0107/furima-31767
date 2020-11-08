@@ -16,7 +16,7 @@
 
 ### Association
 
-- has_one :item
+- has_many :items
 - has_many :purchases
 
 
