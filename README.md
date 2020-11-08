@@ -56,13 +56,16 @@
 - belongs_to :purchase
 
 
+## purchases テーブル
 
 | Column    | Type       | Options                       |
 | --------- | ---------- | ----------------------------  |
-| user     | references | null: false, foreign_key:true |
+| user      | references | null: false, foreign_key:true |
 | item      | references | null: false                   |
+| adresses  | references | null: false                   |
 
 ### Association
 
 - belongs_to :user
 - has_one :item
+- has_one :adresses
