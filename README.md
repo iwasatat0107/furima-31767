@@ -24,7 +24,7 @@
 
 | Column          | Type       | Options                       |
 | --------------- | ---------- | ----------------------------- |
-| nickname        | references | null: false, foreign_key:true |
+| user            | references | null: false, foreign_key:true |
 | name            | string     | null: false                   |
 | text            | text       | null: false                   |
 | images_id       | integer    | null: false                   |
