@@ -56,17 +56,7 @@
 
 - has_one :purchase
 
-## images テーブル
 
-| Column    | Type       | Options                       |
-| --------- | ---------- | ----------------------------- |
-| item      | references | null: false, foreign_key:true |
-
-## purchases テーブル
-
-### Association
-
-- belongs_to :item
 
 | Column    | Type       | Options                       |
 | --------- | ---------- | ----------------------------  |
