@@ -36,8 +36,7 @@
 
 ### Association
 
-- has_many :images
-- has_one  :user
+- belongs_to  :user
 - has_one  :purchase
 
 
