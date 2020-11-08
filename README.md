@@ -28,9 +28,9 @@
 | name            | string     | null: false                   |
 | text            | text       | null: false                   |
 | category_id     | integer    | null: false                   |
-| condition_id    | references | null: false                   |
-| postage_pay_id  | string     | null: false                   | 
-| prefecture_id   | text       | null: false                   |
+| condition_id    | integer    | null: false                   |
+| postage_pay_id  | integer    | null: false                   | 
+| prefecture_id   | integer    | null: false                   |
 | shipping_day_id | integer    | null: false                   |
 | price           | integer    | null: false                   |
 
