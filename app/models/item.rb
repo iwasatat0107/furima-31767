@@ -5,6 +5,8 @@ class Item < ApplicationRecord
   belongs_to :postage_pay
   belongs_to :prefecture
   belongs_to :shipping_day
+  has_one_attached :image
+
 
 
   validates :name, :text, presence: true
