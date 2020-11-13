@@ -8,17 +8,19 @@ class Item < ApplicationRecord
   has_one_attached :image
   belongs_to :user
 
-  validates :name, presence: true
-  validates :text, presence: true
-  validates :image, presence: true
+  with_options presence: true do
+    validates :name
+    validates :text
+    validates :image
+  end
 
-  validates :category_id, numericality: { other_than: 1 }
-  validates :condition_id, numericality: { other_than: 1 }
-  validates :postage_pay_id, numericality: { other_than: 1 }
-  validates :prefecture_id, numericality: { other_than: 1 }
-  validates :shipping_day_id, numericality: { other_than: 1 }
+  with_options numericality: { other_than: 1 } do
+    validates :category_id
+    validates :condition_id
+    validates :postage_pay_id
+    validates :prefecture_id
+    validates :shipping_day_id
+  end
 
-  # with_options format: { with: /\A[0-9]+\z/, message: '半角数字を使用してください' } do
   validates :price, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
-  # end
 end
