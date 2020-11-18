@@ -1,12 +1,13 @@
 class UserOrder
   include ActiveModel::Model
-  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :city, :block, :building, :phone_number, :purchase
+  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :city, :block, :building, :phone_number, :purchase, :token
 
   with_options presence: true do
     validates :post_code
     validates :city
     validates :block
     validates :phone_number
+    validates :token
   end
 
   validates :post_code, format: { with: /\A\d{3}[-]\d{4}\z/ }
