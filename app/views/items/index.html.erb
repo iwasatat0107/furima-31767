@@ -139,12 +139,12 @@
           <%= image_tag item.image.variant(resize: '500x500'), class: 'item-img' if item.image.attached? %>
 
           <%# 商品が売れていればsold outを表示しましょう %>
-          <%# if （ここに条件文） %>
+          <% if item.purchase != nil %> 
           <%# もし選択した商品に紐づく購入記録が存在していたら（空ではなかったら） %>
           <div class='sold-out'>
             <span>Sold Out!!</span>
           </div>
-          <%# end %>
+          <% end %>
           <%# //商品が売れていればsold outを表示しましょう %>
 
         </div>
