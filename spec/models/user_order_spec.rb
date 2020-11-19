@@ -17,7 +17,7 @@ RSpec.describe UserOrder, type: :model do
     it '郵便番号にはハイフンがないと保存できないこと' do
       @user_order.post_code = '1234567'
       @user_order.valid?
-      expect(@user_order.errors.full_messages).to include("Post code is invalid")
+      expect(@user_order.errors.full_messages).to include('Post code is invalid')
     end
     it 'prefecture_idが空だと保存できないこと' do
       @user_order.prefecture_id = 1
@@ -42,14 +42,14 @@ RSpec.describe UserOrder, type: :model do
     it '電話番号には11桁以内でないと保存できないこと' do
       @user_order.phone_number = '123456789012'
       @user_order.valid?
-      expect(@user_order.errors.full_messages).to include("Phone number is invalid")
+      expect(@user_order.errors.full_messages).to include('Phone number is invalid')
     end
     it '電話番号にはハイフンがあると保存できないこと' do
       @user_order.phone_number = '012-3456-7890'
       @user_order.valid?
-      expect(@user_order.errors.full_messages).to include("Phone number is invalid")
+      expect(@user_order.errors.full_messages).to include('Phone number is invalid')
     end
-    it "tokenが空では登録できないこと" do
+    it 'tokenが空では登録できないこと' do
       @user_order.token = nil
       @user_order.valid?
       expect(@user_order.errors.full_messages).to include("Token can't be blank")
