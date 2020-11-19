@@ -19,7 +19,7 @@ RSpec.describe UserOrder, type: :model do
       @user_order.valid?
       expect(@user_order.errors.full_messages).to include('Post code is invalid')
     end
-    it 'prefecture_idが空だと保存できないこと' do
+    it 'prefecture_idが1だと保存できないこと' do
       @user_order.prefecture_id = 1
       @user_order.valid?
       expect(@user_order.errors.full_messages).to include("Prefecture can't be blank")
